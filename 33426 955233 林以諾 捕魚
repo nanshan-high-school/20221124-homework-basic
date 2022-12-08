@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int X,Y,N,anA,anB;
+    cin >> X >> Y;
+    cin >> N;
+    for(int i = N;i > 0;i--){
+        int A,B,C,D;
+        cin >> A >> B;
+
+        int a,b;
+        if (A - X < 0){
+            a=(A - X)* -1;
+        }else{
+            a=A - X;
+        }
+        
+        if(B - X < 0){
+            b=B - X* -1;
+        }else{
+            b=B - X;
+        }
+
+        if(i < N){
+            if(a*a + b*b < C*C + D*D){
+                anA = A;
+                anB = B;
+            }else{
+                anA = C;
+                anB = D;
+            }
+        }else{
+            anA = A;
+            anB = B;
+        }
+        C = a;
+        D = b;
+    }
+    cout << anA << " " << anB;
+}
