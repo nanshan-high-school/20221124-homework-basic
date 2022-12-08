@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int K,W,S,E,T,O;
+    cin >> K >> W >> S >> E;
+
+    O = W % 2;
+    if(K > 2){
+        T = (K - 2) * 5 + 20 + (W-O) / 2 * 5;
+    }else{
+        T = 20 + (W-O) / 2 * 5;
+    }
+        if(E > 18){
+            T += 185;
+        }
+        if(E > 19){
+            T += 195;
+        }
+        if(E > 20){
+            T += 205;
+        }
+        if(E > 21){
+            T += 215;
+        }
+        if(E > 22){
+            T += 225;
+        }
+        if(S >= 19){
+            T -= 185;
+        }
+        if(S >= 20){
+            T -= 195;
+        }
+        if(S >= 21){
+            T -= 215;
+        }
+        if(S >= 22){
+            T -= 225;
+        }
+    cout << T;
+}
