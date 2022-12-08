@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+ int X,R,V,N,C,S;
+    cin >> X >> R >> V;
+    cin >> N;
+    for(int i = N;i > 0;i--){
+        cin >> C >> S;
+        if(C >= X - R & C <= X + R){
+            if(S <= V){
+                X = C;
+            }else{
+                if(X > C){
+                    X += 15;
+                }else{
+                    X -= 15;  
+                }
+            }    
+        }
+    }
+    cout << X;
+}
