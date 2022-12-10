@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int km;
+    cin >> km;
+    int minute;
+    cin >> minute;
+    int on;
+    cin >> on;
+    int off;
+    cin >> off;
+    int money;
+    money = 0;
+    int countplus;
+    countplus = 0;
+    
+
+    if (km < 3){
+    money = money + 20;
+    }
+    if (minute > 1){
+    money = money + (minute / 2) * 5;
+    money = money + countplus;
+        }
+    
+    if (km > 2){
+    money = money + (km -2) * 5 + 20;
+    }
+    if (on >= 18 || off >= 19 ){
+        if (on <= 18){
+            on = 18;
+        } 
+    for (int i = on;i < off;i++){
+        if (i == 18){
+            money = money + 185;
+        }
+        if (i == 19){
+            money = money + 195;
+        }
+        if (i == 20){
+            money = money + 205;
+        }
+        if (i == 21){
+            money = money + 215;
+        }
+        if (i == 22){
+            money = money + 225;
+        }
+        
+    }
+        }
+    cout << money ;
+    }

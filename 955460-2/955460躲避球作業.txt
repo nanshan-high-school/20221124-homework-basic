@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int x; 
+    cin >> x; 
+    int r;
+    cin >> r;
+    int v;
+    cin >> v; 
+    int n;
+    cin >> n;
+    for(int i=0; i<n ; i++){
+        int p;
+        cin >> p;
+        int s;
+        cin >> s;
+        if(p - x < r && r < x + p ){
+            if(r <= v){
+                x = p;
+            }
+
+            }
+        }
+    cout << x;
+    }
